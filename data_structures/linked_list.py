@@ -8,7 +8,7 @@ class Element:
 
 
 class LinkedList:
-    def __init__(self, values: list):
+    def __init__(self, values: list = None):
         self.head = None
         if values:
             prev_elem = None
@@ -91,6 +91,14 @@ class LinkedList:
                 current = current.next_el
         return 0
 
+    def delete_first(self):
+        if self.head:
+            result = self.head.value
+            self.head = self.head.next_el
+        else:
+            result = None
+        return result
+
     def __len__(self):
         counter = 0
         current = self.head
@@ -109,7 +117,7 @@ class LinkedList:
         return result
 
 
-if __name__ == '__main__':
+def test():
     assert LinkedList([]).aslist == []
     linked_list = LinkedList([1, 2, 3, 4])
     assert str(linked_list) == "1->2->3->4"
@@ -127,3 +135,7 @@ if __name__ == '__main__':
     assert linked_list.delete(10)
     assert not linked_list.delete(42)
     assert len(linked_list) == 4
+
+
+if __name__ == '__main__':
+    test()
