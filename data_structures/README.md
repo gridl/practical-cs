@@ -26,3 +26,5 @@ In **linked lists** each element points to the next one and sometimes to the pre
 - peek - get access to the top without modifying the stack
 
 Stacks can be implemented as arrays or as linked lists.
+
+test
