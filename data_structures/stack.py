@@ -27,6 +27,25 @@ class Stack:
         return str(self.linked_list)
 
 
+class ArrayStack:
+    def __init__(self, top=None):
+        self.stack = []
+        if top:
+            self.stack.append(top)
+
+    def push(self, value):
+        self.stack.append(value)
+
+    def peel(self):
+        return self.stack[-1]
+
+    def pop(self):
+        return self.stack.pop()
+
+    def __repr__(self):
+        return str(self.stack)
+
+
 def test():
     stack = Stack()
     assert not str(stack)
