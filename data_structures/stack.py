@@ -1,12 +1,12 @@
-from linked_list import LinkedList
+from lists import SingleLinkedList
 
 
 class Stack:
     def __init__(self, top=None):
         if top:
-            self.linked_list = LinkedList(values=[top])
+            self.linked_list = SingleLinkedList(values=[top])
         else:
-            self.linked_list = LinkedList()
+            self.linked_list = SingleLinkedList()
 
     # O(1)
     def push(self, value):

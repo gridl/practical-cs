@@ -7,7 +7,7 @@ class Element:
         return str(self.value)
 
 
-class LinkedList:
+class SingleLinkedList:
     def __init__(self, values: list = None):
         self.head = None
         if values:
@@ -118,8 +118,8 @@ class LinkedList:
 
 
 def test():
-    assert LinkedList([]).aslist == []
-    linked_list = LinkedList([1, 2, 3, 4])
+    assert SingleLinkedList([]).aslist == []
+    linked_list = SingleLinkedList([1, 2, 3, 4])
     assert str(linked_list) == "1->2->3->4"
     assert len(linked_list) == 4
     linked_list.append_start(10)
